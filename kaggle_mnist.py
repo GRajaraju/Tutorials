@@ -10,6 +10,9 @@ y_labels = data[:,0]
 x_data = data[:,1:]
 y_labels = y_labels.reshape((42000,1))
 
+# Normalizing data
+x_data = x_data / x_data.max()
+
 # Converting labels into one-hot encoder
 label_size = 10
 y_data = []
